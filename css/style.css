@@ -7,8 +7,6 @@
 
 .hamburger-menu {
   display: none; /* 初期は非表示 */
-  flex-direction: column;
-  cursor: pointer;
 }
 
 
@@ -288,7 +286,6 @@
 
   .news_icon {
     width: 100%;
-    display: block;
   }
 
   .news_text {
@@ -299,7 +296,6 @@
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: flex-start;
     gap: 0;
   }
 
@@ -327,14 +323,119 @@
   }
 }
 
-@media screen and (max-width: 767px){
-  .contact-btn{
-    display: none;
+@media screen and (max-width: 767px) {
+  .contact-btn {
+    display: none; /* スマホサイズで非表示 */
+  }
+
+  .hamburger-menu {
+    display: flex; /* メニューを表示 */
+    flex-direction: column; /* 縦に並べる */
+  }
+
+  .hamburger-menu div {
+    width: 25px; /* 線の幅 */
+    height: 3px; /* 線の高さ */
+    background-color: #333; /* 線の色 */
+    margin: 3px 0; /* 線の間隔 */
+  }
+
+  .keyvisual {
+    padding: 200px 0;
+    max-width: 100%;
+  }
+
+
+  .main_title {
+    font-size: 40px;
+    color: #6ba7eb;
+  }
+
+  .main_title h1 {
+    font-size: 30px;
+    color: #fff;
+    margin-top: 30px;
+  }
+
+  .inner {
+    width: 97%;
+    margin: 0 auto;
+    box-sizing: border-box; /* 余計な横スクロールを防ぐ */
   }
   
-  .hamburger-menu{
-    justify-content: right;
-    display: flex;
-    flex-direction: column;
+  .news_content {
+    display: block;
+    text-align: center;
+    max-width: 100%;
   }
-}
+
+  .news_icon {
+    width: 100%;
+    display: block;
+  }
+
+  .news_text {
+    max-width:100%;
+  }
+
+  .skills_icon {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 0;
+    max-width: 100%;
+  }
+
+  .skills_icon li:nth-child(3n+4) {
+    margin-top: 80px;
+  }
+
+  .skills_icon li:nth-child(7),
+  .skills_icon li:nth-child(11) {
+    margin-bottom: 80px;
+  }
+
+  .skills_icon li{
+    width: 300px;
+  }
+
+
+  .plan_table{
+    justify-content: center;
+  }
+
+
+ .plan{
+  max-width: 100%;
+  padding: 50px 0;
+ }
+
+  .plan_table th{
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .plan_table td{
+    font-size: 12px;
+  }
+
+  .sns {
+    padding: 50px 0;
+  }
+
+  .sns-icon {
+    padding: 50px 0;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sns-icon a {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+
+  }
